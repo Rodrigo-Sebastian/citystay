@@ -2,20 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+    font-family: "Figtree", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.header-navigation,
+.navigation,
+.footer-container,
+.login-header{
+    margin: auto;
+    max-width: 1720px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-pagination-bullet {
+    background-color: gray; /* Standardfärg för inaktiva bullets */
+    width: 20px; /* Bredd */
+    height: 20px; /* Höjd */
+    opacity: 0.5;
+    transition: all 0.3s ease; /* För att göra övergången snygg */
 }
+
+/* Aktiv bullet */
+.swiper-pagination-bullet-active {
+    background-color: #888; /* Färg för aktiv bullet */
+    border: 1px solid wheat;
+    opacity: 1; /* Full opacitet för aktiv bullet */
+}
+
+/* Anpassad bullet (från renderBullet) */
+.custom-bullet {
+    background-color: gray; /* Färg för bullets */
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* När bullet är aktiv */
+.custom-bullet.swiper-pagination-bullet-active {
+    background-color: #888;
+    border: 1px-solid wheat;
+    opacity: 1;
+}
+
